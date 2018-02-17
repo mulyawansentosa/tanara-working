@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 1316:
+/***/ 1313:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51,7 +51,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		return {
 			formstate: {},
 			model: {
-				provinsi_f_id: '',
+				id: '',
 				provinsi_f_nama: '',
 				provinsi_f_ket: ''
 			}
@@ -75,7 +75,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			} else {
 				if (typeof this.$route.params.id !== 'undefined') {
 					axios.post('/provinsi/update/' + this.$route.params.id, {
-						provinsi_f_id: this.model.provinsi_f_id,
+						id: this.model.id,
 						provinsi_f_nama: this.model.provinsi_f_nama,
 						provinsi_f_ket: this.model.provinsi_f_ket
 					}).then(function (response) {
@@ -89,7 +89,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 					});
 				} else {
 					axios.post('/provinsi/create', {
-						provinsi_f_id: this.model.provinsi_f_id,
+						id: this.model.id,
 						provinsi_f_nama: this.model.provinsi_f_nama,
 						provinsi_f_ket: this.model.provinsi_f_ket
 					}).then(function (response) {
@@ -106,8 +106,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		isiform: function isiform(ref) {
 			axios.get('/provinsi/read/' + ref.$route.params.id).then(function (response) {
-				if (response.data.length > 0) {
-					ref.model.provinsi_f_id = response.data[0].provinsi_f_id, ref.model.provinsi_f_nama = response.data[0].provinsi_f_nama, ref.model.provinsi_f_ket = response.data[0].provinsi_f_ket;
+				if (response.data !== 'undefined') {
+					ref.model.id = response.data.id, ref.model.provinsi_f_nama = response.data.provinsi_f_nama, ref.model.provinsi_f_ket = response.data.provinsi_f_ket;
 				}
 			});
 		}
@@ -116,7 +116,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 1317:
+/***/ 1314:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -150,18 +150,18 @@ var render = function() {
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.model.provinsi_f_id,
-                expression: "model.provinsi_f_id"
+                value: _vm.model.id,
+                expression: "model.id"
               }
             ],
-            attrs: { type: "hidden", name: "provinsi_f_id" },
-            domProps: { value: _vm.model.provinsi_f_id },
+            attrs: { type: "hidden", name: "id" },
+            domProps: { value: _vm.model.id },
             on: {
               input: function($event) {
                 if ($event.target.composing) {
                   return
                 }
-                _vm.$set(_vm.model, "provinsi_f_id", $event.target.value)
+                _vm.$set(_vm.model, "id", $event.target.value)
               }
             }
           }),
@@ -337,9 +337,9 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(6)
 /* script */
-var __vue_script__ = __webpack_require__(1316)
+var __vue_script__ = __webpack_require__(1313)
 /* template */
-var __vue_template__ = __webpack_require__(1317)
+var __vue_template__ = __webpack_require__(1314)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */

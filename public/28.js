@@ -1,6 +1,6 @@
 webpackJsonp([28],{
 
-/***/ 1267:
+/***/ 1264:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -8,7 +8,7 @@ var normalizeComponent = __webpack_require__(6)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(1303)
+var __vue_template__ = __webpack_require__(1300)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1303:
+/***/ 1300:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {

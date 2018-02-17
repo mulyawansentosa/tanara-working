@@ -9,7 +9,7 @@
     <h1>Formulir Provinsi</h1>
     <vue-form :state="formstate" :load="isiform" @submit.prevent="onSubmit" class="mb-3">
         <input type="hidden" name="post"/>
-        <input type="hidden" v-model="model.provinsi_f_id" name="provinsi_f_id">
+        <input type="hidden" v-model="model.id" name="id">
         <div class="col-sm mb-2">
           <validate tag="div">
             <label for="exampleInputEmail1">Nama Provinsi</label>
@@ -44,7 +44,7 @@ export default {
     return {
       formstate: {},
       model:{
-        provinsi_f_id: '',
+        id: '',
         provinsi_f_nama: '',
         provinsi_f_ket: ''
       }
@@ -68,7 +68,7 @@ export default {
 		}else{
 			if (typeof this.$route.params.id !== 'undefined'){
 				axios.post('/provinsi/update/'+this.$route.params.id,{
-					provinsi_f_id : this.model.provinsi_f_id,
+					id : this.model.id,
 					provinsi_f_nama : this.model.provinsi_f_nama,
 					provinsi_f_ket  : this.model.provinsi_f_ket
 				})
@@ -84,7 +84,7 @@ export default {
 				});				
 			}else{
 				axios.post('/provinsi/create',{
-					provinsi_f_id : this.model.provinsi_f_id,
+					id : this.model.id,
 					provinsi_f_nama : this.model.provinsi_f_nama,
 					provinsi_f_ket  : this.model.provinsi_f_ket
 				})
@@ -104,10 +104,10 @@ export default {
     isiform: function(ref){
 		axios.get('/provinsi/read/'+ref.$route.params.id)
 		.then(function (response) {
-			if(response.data.length > 0){
-				ref.model.provinsi_f_id   = response.data[0].provinsi_f_id,
-				ref.model.provinsi_f_nama = response.data[0].provinsi_f_nama,
-				ref.model.provinsi_f_ket  =  response.data[0].provinsi_f_ket				
+			if(response.data !== 'undefined'){
+				ref.model.id   				= response.data.id,
+				ref.model.provinsi_f_nama 	= response.data.provinsi_f_nama,
+				ref.model.provinsi_f_ket  	=  response.data.provinsi_f_ket				
 			}
 		});
     }

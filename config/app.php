@@ -163,8 +163,12 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 //	Bantenprov\RasioGMSmpMts\RasioGMSmpMtsServiceProvider::class,
-	Jackiedo\Workbench\WorkbenchServiceProvider::class,
-	Bantenprov\Provinsi\ProvinsiServiceProvider::class,
+		Jackiedo\Workbench\WorkbenchServiceProvider::class,
+
+//	TAMBAHAN MODULE WILAYAN INDONESIA
+		Laravolt\Indonesia\ServiceProvider::class,
+		
+		Bantenprov\WilayahIndonesia\WilayahIndonesiaServiceProvider::class,
 		
         /*
          * Package Service Providers...
@@ -228,7 +232,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+		
+//	TAMBAHAN MODULE WILAYAN INDONESIA
+		'Indonesia' => Laravolt\Indonesia\Facade::class,
     ],
 
 ];

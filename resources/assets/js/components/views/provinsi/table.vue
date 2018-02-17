@@ -104,7 +104,7 @@ export default {
       this.$refs.vuetable.changePage(page);
     },
     editRow(rowData){
-      window.location.href = "/#/provinsi/update/"+rowData.provinsi_f_id;
+      window.location.href = "/#/provinsi/update/"+rowData.id;
       //alert("You clicked edit on"+ JSON.stringify(rowData));
     },
 	deleteRow(rowData){
@@ -118,7 +118,7 @@ export default {
 		}).then((result) => {
 			console.log(result);
 			if (result.value) {
-				axios.post('/provinsi/delete/'+rowData.provinsi_f_id)
+				axios.post('/provinsi/delete/'+rowData.id)
 				.then(function (response){
 					if(response.data.message === 'Fail'){
 						Vue.swal(
