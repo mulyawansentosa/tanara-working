@@ -1,14 +1,14 @@
 webpackJsonp([28],{
 
-/***/ 1264:
+/***/ 1188:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(6)
+var normalizeComponent = __webpack_require__(5)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(1300)
+var __vue_template__ = __webpack_require__(1230)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/views/AdminSystemLogs.vue"
+Component.options.__file = "resources/assets/js/components/views/DemoVueTables.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0e4027e5", Component.options)
+    hotAPI.createRecord("data-v-71ae03c0", Component.options)
   } else {
-    hotAPI.reload("data-v-0e4027e5", Component.options)
+    hotAPI.reload("data-v-71ae03c0", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,23 +48,59 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1300:
+/***/ 1230:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("example-vue-tables"),
+      _vm._v(" "),
+      _c("example-vue-tables-ajax"),
+      _vm._v(" "),
+      _c("example-vue-tables-ajax-image")
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("p", [_vm._v("Admin system logs page - coming soon")])
-    ])
+    return _c(
+      "div",
+      { staticClass: "alert alert-info mb-5", attrs: { role: "alert" } },
+      [
+        _c("ul", { staticClass: "list-unstyled mb-0" }, [
+          _c("li", [
+            _vm._v("Package name: "),
+            _c("code", [_vm._v("vue-tables-2")])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _vm._v("Link: "),
+            _c(
+              "a",
+              {
+                staticClass: "alert-link",
+                attrs: {
+                  href: "https://github.com/matfish2/vue-tables-2",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("GitHub")]
+            )
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -72,7 +108,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-0e4027e5", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-71ae03c0", module.exports)
   }
 }
 

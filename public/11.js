@@ -1,14 +1,14 @@
 webpackJsonp([11],{
 
-/***/ 1276:
+/***/ 1190:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(6)
+var normalizeComponent = __webpack_require__(5)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(1232)
 /* template */
-var __vue_template__ = __webpack_require__(1317)
+var __vue_template__ = __webpack_require__(1233)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/views/desa/desa.vue"
+Component.options.__file = "resources/assets/js/components/views/DemoMiniToastr.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-fa080832", Component.options)
+    hotAPI.createRecord("data-v-0e03721d", Component.options)
   } else {
-    hotAPI.reload("data-v-fa080832", Component.options)
+    hotAPI.reload("data-v-0e03721d", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,41 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1317:
+/***/ 1232:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    x: function x(event) {
+      miniToastr.success('Success message', 'Title');
+      miniToastr.info('Info message', 'Title');
+      miniToastr.warn('Warn message', 'Title');
+      miniToastr.error('Error message', 'Title');
+    }
+  }
+});
+
+/***/ }),
+
+/***/ 1233:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -58,11 +92,11 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "card mb-3" }, [
-      _c("div", { staticClass: "card-header" }, [_vm._v("Example")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body" }, [_c("example-vue-table")], 1)
-    ])
+    _c(
+      "button",
+      { staticClass: "btn btn-secondary btn-lg", on: { click: _vm.x } },
+      [_vm._v("Click Me!")]
+    )
   ])
 }
 var staticRenderFns = [
@@ -77,7 +111,7 @@ var staticRenderFns = [
         _c("ul", { staticClass: "list-unstyled mb-0" }, [
           _c("li", [
             _vm._v("Package name: "),
-            _c("code", [_vm._v("vuetable-2")])
+            _c("code", [_vm._v("mini-toastr")])
           ]),
           _vm._v(" "),
           _c("li", [
@@ -87,7 +121,7 @@ var staticRenderFns = [
               {
                 staticClass: "alert-link",
                 attrs: {
-                  href: "https://github.com/ratiw/vuetable-2",
+                  href: "https://github.com/se-panfilov/mini-toastr",
                   target: "_blank"
                 }
               },
@@ -104,7 +138,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-fa080832", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-0e03721d", module.exports)
   }
 }
 

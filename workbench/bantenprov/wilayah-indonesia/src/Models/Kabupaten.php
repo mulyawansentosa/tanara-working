@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
  * @package Bantenprov\WilayahIndonesia
  * @author  bantenprov <developer.bantenprov@gmail.com>
  */
-class WilayahIndonesiaModel extends Model
+class Kabupaten extends Model
 {
     /**
     * Table name.
     *
     * @var string
     */
-    protected $table = 'wilayah_indonesia';
+    protected $table = 'cities';
 
     /**
     * The attributes that are mass assignable.
@@ -30,4 +30,13 @@ class WilayahIndonesiaModel extends Model
      * @var array
      */
     protected $hidden = [];
+	
+	public function kecamatan(){
+		return $this->hasMany('Bantenprov\WilayahIndonesia\Models\Kecamatan','city_id');
+	}
+
+	public function provinsi(){
+		return $this->belongsTo('Bantenprov\WilayahIndonesia\Models\Provinsi','province_id');
+	}
+	
 }

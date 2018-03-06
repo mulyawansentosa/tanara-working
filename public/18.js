@@ -1,14 +1,14 @@
 webpackJsonp([18],{
 
-/***/ 1249:
+/***/ 1196:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(6)
+var normalizeComponent = __webpack_require__(5)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(1281)
+var __vue_template__ = __webpack_require__(1243)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/views/SignUp.vue"
+Component.options.__file = "resources/assets/js/components/views/bantenprov/wilayah-indonesia/kabupaten/WilayahIndonesiaKabupaten.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-173d7da0", Component.options)
+    hotAPI.createRecord("data-v-1a2aab8d", Component.options)
   } else {
-    hotAPI.reload("data-v-173d7da0", Component.options)
+    hotAPI.reload("data-v-1a2aab8d", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,73 +48,35 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1281:
+/***/ 1243:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "form-auth-wrap" }, [
-    _c(
-      "form",
-      { staticClass: "form-auth form-auth-md" },
-      [
-        _c("h2", { staticClass: "form-auth-heading" }, [_vm._v("Sign up")]),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _vm._m(2),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-primary btn-block text-capitalize",
-            attrs: { type: "submit" }
-          },
-          [_vm._v("Sign up")]
-        ),
-        _vm._v(" "),
-        _c(
-          "p",
-          { staticClass: "text-muted text-center my-2 text-capitalize" },
-          [_vm._v("Already a member?")]
-        ),
-        _vm._v(" "),
-        _c(
-          "router-link",
-          {
-            staticClass: "btn btn-success btn-block text-capitalize",
-            attrs: { to: "/sign-in" }
-          },
-          [_vm._v("Sign in")]
-        ),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c(
-          "p",
-          { staticClass: "mb-0 text-center" },
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "btn btn-light text-capitalize",
-                attrs: { to: "/" }
-              },
-              [
-                _c("i", { staticClass: "fa fa-home fa-lg mr-2" }),
-                _vm._v("\n        Kembali ke Beranda\n      ")
-              ]
-            )
-          ],
-          1
-        )
-      ],
-      1
-    )
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "card mb-3" }, [
+      _c("div", { staticClass: "card-header" }, [_vm._v("Example")]),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "col-2 btn btn-lg btn-primary ml-4 mt-4",
+          attrs: { href: "/#/Kabupaten/form" }
+        },
+        [_vm._v("Tambah Data")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "card-body" },
+        [_c("WilayahIndonesiaKabupatenTable")],
+        1
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -122,100 +84,33 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-sm form-group" }, [
-        _c(
-          "label",
-          { staticClass: "sr-only", attrs: { for: "inputFirstName" } },
-          [_vm._v("First Name")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: {
-            type: "text",
-            id: "inputFirstName",
-            placeholder: "First Name",
-            autofocus: ""
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-sm form-group" }, [
-        _c(
-          "label",
-          { staticClass: "sr-only", attrs: { for: "inputLastName" } },
-          [_vm._v("Last Name")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "text", id: "inputLastName", placeholder: "Last Name" }
-        })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { staticClass: "sr-only", attrs: { for: "inputEmail" } }, [
-        _vm._v("Email address")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: {
-          type: "email",
-          id: "inputEmail",
-          placeholder: "Email address",
-          required: ""
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-sm form-group" }, [
-        _c(
-          "label",
-          { staticClass: "sr-only", attrs: { for: "inputPassword" } },
-          [_vm._v("Password")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: {
-            type: "password",
-            id: "inputPassword",
-            placeholder: "Password",
-            required: ""
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-sm form-group" }, [
-        _c(
-          "label",
-          { staticClass: "sr-only", attrs: { for: "inputConfirmPassword" } },
-          [_vm._v("Confirm Password")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: {
-            type: "password",
-            id: "inputConfirmPassword",
-            placeholder: "Confirm Password",
-            required: ""
-          }
-        })
-      ])
-    ])
+    return _c(
+      "div",
+      { staticClass: "alert alert-info mb-5", attrs: { role: "alert" } },
+      [
+        _c("ul", { staticClass: "list-unstyled mb-0" }, [
+          _c("li", [
+            _vm._v("Package name: "),
+            _c("code", [_vm._v("vuetable-2")])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _vm._v("Link: "),
+            _c(
+              "a",
+              {
+                staticClass: "alert-link",
+                attrs: {
+                  href: "https://github.com/ratiw/vuetable-2",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("GitHub")]
+            )
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -223,7 +118,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-173d7da0", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-1a2aab8d", module.exports)
   }
 }
 

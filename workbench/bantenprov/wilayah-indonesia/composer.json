@@ -1,15 +1,29 @@
 {
     "name": "bantenprov/wilayah-indonesia",
-    "description": "Data Wilayah Seluruh Indonesia",
+    "description": "Daftar nama Provinsi, Kabupaten, Kota, Kecamat dan desa yang ada di Indonesia",
+    "type": "library",
+    "homepage": "https://github.com/bantenprov/wilayah-indonesia",
     "authors": [
         {
             "name": "bantenprov",
-            "email": "developer.bantenprov@gmail.com"
+            "email": "developer.bantenprov@gmail.com",
+            "role": "developer"
         }
     ],
+    "license": "MIT",
+    "support": {
+        "source": "https://github.com/bantenprov/wilayah-indonesia,",
+        "issues": "https://github.com/bantenprov/wilayah-indonesia/issues",
+        "wiki": "https://github.com/bantenprov/wilayah-indonesia/wiki"
+    },
     "require": {
         "php": ">=5.6.4",
-        "illuminate/support": "5.4.*"
+        "laravel/framework": "5.4.*",
+        "laravel/tinker": "~1.0",
+        "laravolt/indonesia": "^0.7.0"
+    },
+    "require-dev": {
+        "doctrine/dbal": "^2.5"
     },
     "autoload": {
         "files": [
@@ -19,5 +33,5 @@
             "Bantenprov\\WilayahIndonesia\\": "src"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }

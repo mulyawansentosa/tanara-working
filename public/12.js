@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 1257:
+/***/ 1191:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(6)
+var normalizeComponent = __webpack_require__(5)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(1293)
+var __vue_template__ = __webpack_require__(1234)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/views/bantenprov/rasio-guru-murid-smp-mts/DashboardRasioGMSmpMts.vue"
+Component.options.__file = "resources/assets/js/components/views/provinsi/provinsi.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-e3d82726", Component.options)
+    hotAPI.createRecord("data-v-04bd78f2", Component.options)
   } else {
-    hotAPI.reload("data-v-e3d82726", Component.options)
+    hotAPI.reload("data-v-04bd78f2", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1293:
+/***/ 1234:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -56,119 +56,21 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-6 mb-3" }, [
-        _c(
-          "div",
-          {
-            staticClass: "card h-100",
-            staticStyle: { color: "#fff", "background-color": "#2196F3" }
-          },
-          [
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [_c("rasio-guru-murid-smp-mts-bar-03")],
-              1
-            )
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-6 mb-3" }, [
-        _c(
-          "div",
-          {
-            staticClass: "card h-100",
-            staticStyle: { color: "#fff", "background-color": "#4CAF50" }
-          },
-          [
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [_c("rasio-guru-murid-smp-mts-pie-03")],
-              1
-            )
-          ]
-        )
-      ])
-    ]),
+    _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-8 mb-3" }, [
-        _c(
-          "div",
-          {
-            staticClass: "card h-100",
-            staticStyle: { color: "#fff", "background-color": "#009688" }
-          },
-          [
-            _vm._m(0),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [_c("rasio-guru-murid-smp-mts-bar-01")],
-              1
-            )
-          ]
-        )
-      ]),
+    _c("div", { staticClass: "card mb-3" }, [
+      _c("div", { staticClass: "card-header" }, [_vm._v("Example")]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-lg-4 mb-3" }, [
-        _c(
-          "div",
-          {
-            staticClass: "card h-100",
-            staticStyle: { color: "#fff", "background-color": "#FF9800" }
-          },
-          [
-            _vm._m(1),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [_c("rasio-guru-murid-smp-mts-pie-01")],
-              1
-            )
-          ]
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-6 mb-3" }, [
-        _c(
-          "div",
-          {
-            staticClass: "card h-100",
-            staticStyle: { color: "#fff", "background-color": "#F44336" }
-          },
-          [
-            _vm._m(2),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [_c("rasio-guru-murid-smp-mts-pie-02")],
-              1
-            )
-          ]
-        )
-      ]),
+      _c(
+        "a",
+        {
+          staticClass: "col-2 btn btn-lg btn-primary ml-4 mt-4",
+          attrs: { href: "/#/provinsi/form" }
+        },
+        [_vm._v("Tambah Data")]
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "col-lg-6 mb-3" }, [
-        _c("div", { staticClass: "card text-white bg-dark h-100" }, [
-          _vm._m(3),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "card-body" },
-            [_c("rasio-guru-murid-smp-mts-bar-02")],
-            1
-          )
-        ])
-      ])
+      _c("div", { staticClass: "card-body" }, [_c("table_provinsi")], 1)
     ])
   ])
 }
@@ -177,57 +79,33 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("i", {
-        staticClass: "fa fa-bar-chart",
-        attrs: { "aria-hidden": "true" }
-      }),
-      _vm._v(
-        "\n          Rasio Guru Murid SMP MTs Berdasarkan Wilayah\n        "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("i", {
-        staticClass: "fa fa-pie-chart",
-        attrs: { "aria-hidden": "true" }
-      }),
-      _vm._v(
-        "\n          Rasio Guru Murid SMP MTs Berdasarkan Wilayah\n        "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("i", {
-        staticClass: "fa fa-pie-chart",
-        attrs: { "aria-hidden": "true" }
-      }),
-      _vm._v(
-        "\n          Rasio Guru Murid SMP MTs Berdasarkan Kategori\n        "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("i", {
-        staticClass: "fa fa-bar-chart",
-        attrs: { "aria-hidden": "true" }
-      }),
-      _vm._v(
-        "\n          Rasio Guru Murid SMP MTs Berdasarkan Kategori\n        "
-      )
-    ])
+    return _c(
+      "div",
+      { staticClass: "alert alert-info mb-5", attrs: { role: "alert" } },
+      [
+        _c("ul", { staticClass: "list-unstyled mb-0" }, [
+          _c("li", [
+            _vm._v("Package name: "),
+            _c("code", [_vm._v("vuetable-2")])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _vm._v("Link: "),
+            _c(
+              "a",
+              {
+                staticClass: "alert-link",
+                attrs: {
+                  href: "https://github.com/ratiw/vuetable-2",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("GitHub")]
+            )
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -235,7 +113,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-e3d82726", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-04bd78f2", module.exports)
   }
 }
 

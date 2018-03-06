@@ -389,6 +389,178 @@ let routes = [
     ]
   },
 
+  //ROUTE PROVINSI WILAYAH INDONESIA
+	{
+		path: '/wilayah-indonesia/provinsi',
+		redirect: '/wilayah-indonesia/provinsi',
+		component: layout('Default'),
+		children: [
+			{
+				path: '/wilayah-indonesia/provinsi',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsi.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Provinsi"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/provinsi/form',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsiForm.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Provinsi"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/provinsi/form/:id',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsiForm.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Provinsi"
+				}
+			},
+		]
+	},
+	//END ROUTE PROVINSI WILAYAH INDONESIA
+	
+	//ROUTE KABUPATEN WILAYAH INDONESIA
+	{
+		path: '/wilayah-indonesia/kabupaten',
+		redirect: '/wilayah-indonesia/kabupaten',
+		component: layout('Default'),
+		children: [
+			{
+				path: '/wilayah-indonesia/kabupaten',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kabupaten/WilayahIndonesiaKabupaten.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Kabupaten"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/kabupaten/form',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kabupaten/WilayahIndonesiaKabupatenForm.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Kabupaten"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/kabupaten/form/:id',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kabupaten/WilayahIndonesiaKabupatenForm.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Kabupaten"
+				}
+			},
+		]
+	},
+	//END ROUTE KABUPATEN WILAYAH INDONESIA
+
+	//ROUTE KECAMATAN WILAYAH INDONESIA
+	{
+		path: '/wilayah-indonesia/kecamatan',
+		redirect: '/wilayah-indonesia/kecamatan',
+		component: layout('Default'),
+		children: [
+			{
+				path: '/wilayah-indonesia/kecamatan',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kecamatan/WilayahIndonesiaKecamatan.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Kecamatan"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/kecamatan/form',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kecamatan/WilayahIndonesiaKecamatanForm.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Kecamatan"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/kecamatan/form/:id',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kecamatan/WilayahIndonesiaKecamatanForm.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Kecamatan"
+				}
+			},
+		]
+	},
+	//END ROUTE KECAMATAN WILAYAH INDONESIA
+
+	//ROUTE DESA WILAYAH INDONESIA
+	{
+		path: '/wilayah-indonesia/desa',
+		redirect: '/wilayah-indonesia/desa',
+		component: layout('Default'),
+		children: [
+			{
+				path: '/wilayah-indonesia/desa',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/desa/WilayahIndonesiaDesa.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Desa"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/desa/form',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/desa/WilayahIndonesiaDesaForm.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Desa"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/desa/form/:id',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/desa/WilayahIndonesiaDesaForm.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Desa"
+				}
+			},
+		]
+	},
+	//END ROUTE DESA WILAYAH INDONESIA
+	
 ];
 
 export default routes

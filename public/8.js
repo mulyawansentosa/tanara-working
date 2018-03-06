@@ -1,14 +1,38 @@
 webpackJsonp([8],{
 
-/***/ 1273:
+/***/ 1165:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./Default.vue": 1199
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 1165;
+
+/***/ }),
+
+/***/ 1199:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(6)
+var normalizeComponent = __webpack_require__(5)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(1312)
+var __vue_template__ = __webpack_require__(1200)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +49,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/views/provinsi/provinsi.vue"
+Component.options.__file = "resources/assets/js/layouts/Default.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +58,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-04bd78f2", Component.options)
+    hotAPI.createRecord("data-v-a006064e", Component.options)
   } else {
-    hotAPI.reload("data-v-04bd78f2", Component.options)
+    hotAPI.reload("data-v-a006064e", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,72 +72,44 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1312:
+/***/ 1200:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "card mb-3" }, [
-      _c("div", { staticClass: "card-header" }, [_vm._v("Example")]),
+  return _c(
+    "div",
+    [
+      _c("router-view", { attrs: { name: "navbar" } }),
       _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "col-2 btn btn-lg btn-primary ml-4 mt-4",
-          attrs: { href: "/#/provinsi/form" }
-        },
-        [_vm._v("Tambah Data")]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body" }, [_c("table_provinsi")], 1)
-    ])
-  ])
+      _c("div", { staticClass: "row no-gutters" }, [
+        _c(
+          "div",
+          { staticClass: "site-sidebar col-md-4 col-lg-3" },
+          [_c("router-view", { attrs: { name: "sidebar" } })],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "site-main col-md-8 col-lg-9 p-3 p-md-4" },
+          [_c("router-view", { attrs: { name: "main" } })],
+          1
+        )
+      ])
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "alert alert-info mb-5", attrs: { role: "alert" } },
-      [
-        _c("ul", { staticClass: "list-unstyled mb-0" }, [
-          _c("li", [
-            _vm._v("Package name: "),
-            _c("code", [_vm._v("vuetable-2")])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _vm._v("Link: "),
-            _c(
-              "a",
-              {
-                staticClass: "alert-link",
-                attrs: {
-                  href: "https://github.com/ratiw/vuetable-2",
-                  target: "_blank"
-                }
-              },
-              [_vm._v("GitHub")]
-            )
-          ])
-        ])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-04bd78f2", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-a006064e", module.exports)
   }
 }
 

@@ -169,5 +169,32 @@ const MenuItems = [
 		},
 	]
   },
+  {
+    name: 'Wilayah Indonesia',
+    icon: 'fa fa-play-circle',
+    childType: 'collapse',
+    childItem: [
+		{
+			name: 'Provinsi',
+			link: '/wilayah-indonesia/provinsi',
+			icon: 'fa fa-angle-right'
+		},
+		{
+			name: 'Kabupaten',
+			link: '/wilayah-indonesia/kabupaten',
+			icon: 'fa fa-angle-right'
+		},
+		{
+			name: 'Kecamatan',
+			link: '/wilayah-indonesia/kecamatan',
+			icon: 'fa fa-angle-right'
+		},
+		{
+			name: 'Desa',
+			link: '/wilayah-indonesia/desa',
+			icon: 'fa fa-angle-right'
+		},
+	]
+  },
 ];
 export default MenuItems;
