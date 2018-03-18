@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 1183:
+/***/ 1185:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(5)
 /* script */
-var __vue_script__ = __webpack_require__(1223)
+var __vue_script__ = __webpack_require__(1225)
 /* template */
-var __vue_template__ = __webpack_require__(1224)
+var __vue_template__ = __webpack_require__(1226)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/views/DemoVueForm.vue"
+Component.options.__file = "resources/assets/js/components/views/DemoVueSelect.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4a4911bf", Component.options)
+    hotAPI.createRecord("data-v-85d45d92", Component.options)
   } else {
-    hotAPI.reload("data-v-4a4911bf", Component.options)
+    hotAPI.reload("data-v-85d45d92", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1223:
+/***/ 1225:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -104,32 +104,81 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      formstate: {},
-      model: {
-        name: '',
-        email: ''
-      }
+      options1: [{
+        title: 'Read the Docs',
+        icon: 'fa-book',
+        url: 'https://codeclimate.com/github/sagalbot/vue-select'
+      }, {
+        title: 'View on GitHub',
+        icon: 'fa-github',
+        url: 'https://codeclimate.com/github/sagalbot/vue-select'
+      }, {
+        title: 'View on NPM',
+        icon: 'fa-database',
+        url: 'https://codeclimate.com/github/sagalbot/vue-select'
+      }, {
+        title: 'View Codepen Examples',
+        icon: 'fa-pencil',
+        url: 'https://codeclimate.com/github/sagalbot/vue-select'
+      }],
+
+      options2: [{ countryCode: "AU", countryName: "Australia" }, { countryCode: "CA", countryName: "Canada" }, { countryCode: "CN", countryName: "China" }, { countryCode: "DE", countryName: "Germany" }, { countryCode: "JP", countryName: "Japan" }, { countryCode: "MX", countryName: "Mexico" }, { countryCode: "CH", countryName: "Switzerland" }, { countryCode: "US", countryName: "United States" }],
+
+      options3: [{ id: 1, label: 'foo' }, { id: 3, label: 'bar' }, { id: 2, label: 'baz' }],
+      selectedOptions3: { id: 3, label: 'bar' },
+
+      options4: ['foo', 'bar', 'baz'],
+      selectedOptions4: ['foo', 'bar'],
+
+      options5: ['foo', 'bar', 'baz'],
+      selectedOptions5: [],
+
+      options6: []
     };
   },
 
   methods: {
-    onSubmit: function onSubmit() {
-      if (this.formstate.$invalid) {
-        // alert user and exit early
-        return;
-      }
-      // otherwise submit form
-    }
+    //== 5. Vue Select - Select All (options5)
+    selectAll: function selectAll() {
+      var select = this.$refs.select;
+      select.options.forEach(function (option) {
+        select.select(option);
+      });
+      // bug caused by onAfterSelect
+      select.open = false;
+    },
+
+
+    //== 6. Vue Select - Ajax (options6)
+    onSearch: function onSearch(search, loading) {
+      loading(true);
+      this.search(loading, search, this);
+    },
+
+    search: _.debounce(function (loading, search, vm) {
+      fetch('https://api.github.com/search/repositories?q=' + escape(search)).then(function (res) {
+        res.json().then(function (json) {
+          return vm.options6 = json.items;
+        });
+        loading(false);
+      });
+    }, 350)
   }
 });
 
 /***/ }),
 
-/***/ 1224:
+/***/ 1226:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -141,161 +190,149 @@ var render = function() {
     [
       _vm._m(0),
       _vm._v(" "),
-      _c(
-        "vue-form",
-        {
-          staticClass: "mb-3",
-          attrs: { state: _vm.formstate },
-          on: {
-            submit: function($event) {
-              $event.preventDefault()
-              _vm.onSubmit($event)
+      _c("h2", [_vm._v("1. Vue Select - Custom Option Templating")]),
+      _vm._v(" "),
+      _c("v-select", {
+        staticClass: "mb-4",
+        attrs: { options: _vm.options1, label: "title" },
+        scopedSlots: _vm._u([
+          {
+            key: "option",
+            fn: function(option) {
+              return [
+                _c("span", { staticClass: "fa", class: option.icon }),
+                _vm._v("\n      " + _vm._s(option.title) + "\n    ")
+              ]
             }
           }
+        ])
+      }),
+      _vm._v(" "),
+      _c("h2", [_vm._v("2. Vue Select - Custom Labels")]),
+      _vm._v(" "),
+      _c("v-select", {
+        staticClass: "mb-4",
+        attrs: { label: "countryName", options: _vm.options2 }
+      }),
+      _vm._v(" "),
+      _c("h2", [_vm._v("3. Vue Select - Using v-model")]),
+      _vm._v(" "),
+      _c("v-select", {
+        staticClass: "mb-4",
+        attrs: { options: _vm.options3 },
+        model: {
+          value: _vm.selectedOptions3,
+          callback: function($$v) {
+            _vm.selectedOptions3 = $$v
+          },
+          expression: "selectedOptions3"
+        }
+      }),
+      _vm._v(" "),
+      _c("h2", [_vm._v("4. Vue Select - Selecting Multiple Values")]),
+      _vm._v(" "),
+      _c("v-select", {
+        staticClass: "mb-4",
+        attrs: { multiple: "", options: _vm.options4 },
+        model: {
+          value: _vm.selectedOptions4,
+          callback: function($$v) {
+            _vm.selectedOptions4 = $$v
+          },
+          expression: "selectedOptions4"
+        }
+      }),
+      _vm._v(" "),
+      _c("h2", [_vm._v("5. Vue Select - Select All")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-secondary btn-sm mb-2",
+          on: { click: _vm.selectAll }
         },
-        [
-          _c("div", { staticClass: "form-row" }, [
-            _c(
-              "div",
-              { staticClass: "col-sm mb-2" },
-              [
-                _c(
-                  "validate",
-                  { attrs: { tag: "div" } },
-                  [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.model.name,
-                          expression: "model.name"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        required: "",
-                        name: "name",
-                        placeholder: "Name"
-                      },
-                      domProps: { value: _vm.model.name },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.model, "name", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("field-messages", { attrs: { name: "name" } }, [
-                      _c("small", { staticClass: "form-text text-success" }, [
-                        _vm._v("Looks good!")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "small",
-                        {
-                          staticClass: "form-text text-danger",
-                          attrs: { slot: "required" },
-                          slot: "required"
-                        },
-                        [_vm._v("Name is a required field")]
-                      )
-                    ])
-                  ],
-                  1
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-sm mb-2" },
-              [
-                _c(
-                  "validate",
-                  { attrs: { tag: "div" } },
-                  [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.model.email,
-                          expression: "model.email"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        name: "email",
-                        type: "email",
-                        required: "",
-                        placeholder: "Email"
-                      },
-                      domProps: { value: _vm.model.email },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.model, "email", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("field-messages", { attrs: { name: "email" } }, [
-                      _c("small", { staticClass: "form-text text-success" }, [
-                        _vm._v("Looks good!")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "small",
-                        {
-                          staticClass: "form-text text-danger",
-                          attrs: { slot: "required" },
-                          slot: "required"
-                        },
-                        [_vm._v("Email is a required field")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "small",
-                        {
-                          staticClass: "form-text text-danger",
-                          attrs: { slot: "email" },
-                          slot: "email"
-                        },
-                        [_vm._v("Email is not valid")]
-                      )
-                    ])
-                  ],
-                  1
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-auto mb-2" }, [
-              _c(
-                "button",
-                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-                [_vm._v("Submit")]
-              )
-            ])
-          ])
-        ]
+        [_vm._v("Select All")]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "card text-dark bg-light" }, [
-        _c("div", { staticClass: "card-header" }, [_vm._v("Form states")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("pre", [_vm._v(_vm._s(_vm.formstate))])
-        ])
-      ])
+      _c("v-select", {
+        ref: "select",
+        staticClass: "mb-4",
+        attrs: { multiple: "", options: _vm.options5 },
+        model: {
+          value: _vm.selectedOptions5,
+          callback: function($$v) {
+            _vm.selectedOptions5 = $$v
+          },
+          expression: "selectedOptions5"
+        }
+      }),
+      _vm._v(" "),
+      _c("h2", [_vm._v("6. Vue Select - Ajax")]),
+      _vm._v(" "),
+      _c(
+        "v-select",
+        {
+          attrs: {
+            placeholder: "search github..",
+            label: "name",
+            filterable: false,
+            options: _vm.options6
+          },
+          on: { search: _vm.onSearch },
+          scopedSlots: _vm._u([
+            {
+              key: "option",
+              fn: function(option) {
+                return [
+                  _c("div", { staticClass: "media p-2" }, [
+                    _c("img", {
+                      staticClass: "mr-3",
+                      attrs: {
+                        src: option.owner.avatar_url,
+                        width: "72",
+                        height: "72",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "media-body" }, [
+                      _c("h5", [_vm._v(_vm._s(option.full_name))])
+                    ])
+                  ])
+                ]
+              }
+            },
+            {
+              key: "selected-option",
+              fn: function(option) {
+                return [
+                  _c("div", { staticClass: "media p-2 selected" }, [
+                    _c("img", {
+                      staticClass: "mr-3",
+                      attrs: {
+                        src: option.owner.avatar_url,
+                        width: "72",
+                        height: "72",
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "media-body" }, [
+                      _c("h5", [_vm._v(_vm._s(option.full_name))])
+                    ])
+                  ])
+                ]
+              }
+            }
+          ])
+        },
+        [
+          _c("template", { slot: "no-options" }, [
+            _vm._v("\n      type to search GitHub repositories..\n    ")
+          ])
+        ],
+        2
+      )
     ],
     1
   )
@@ -312,7 +349,7 @@ var staticRenderFns = [
         _c("ul", { staticClass: "list-unstyled mb-0" }, [
           _c("li", [
             _vm._v("Package name: "),
-            _c("code", [_vm._v("vue-form")])
+            _c("code", [_vm._v("vue-select")])
           ]),
           _vm._v(" "),
           _c("li", [
@@ -322,7 +359,7 @@ var staticRenderFns = [
               {
                 staticClass: "alert-link",
                 attrs: {
-                  href: "https://github.com/fergaldoyle/vue-form",
+                  href: "https://github.com/sagalbot/vue-select",
                   target: "_blank"
                 }
               },
@@ -339,7 +376,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4a4911bf", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-85d45d92", module.exports)
   }
 }
 

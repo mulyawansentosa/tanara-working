@@ -1,6 +1,6 @@
 webpackJsonp([15],{
 
-/***/ 1194:
+/***/ 1193:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -8,7 +8,7 @@ var normalizeComponent = __webpack_require__(5)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(1239)
+var __vue_template__ = __webpack_require__(1237)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/views/desa/desa.vue"
+Component.options.__file = "resources/assets/js/components/views/kabupaten/kabupaten.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-fa080832", Component.options)
+    hotAPI.createRecord("data-v-84cce262", Component.options)
   } else {
-    hotAPI.reload("data-v-fa080832", Component.options)
+    hotAPI.reload("data-v-84cce262", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1239:
+/***/ 1237:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -104,7 +104,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-fa080832", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-84cce262", module.exports)
   }
 }
 

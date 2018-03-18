@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 1241:
+/***/ 1235:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116,7 +116,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 1242:
+/***/ 1236:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -325,7 +325,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-847c77c2", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-04a4f0a7", module.exports)
   }
 }
 
@@ -337,9 +337,9 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(5)
 /* script */
-var __vue_script__ = __webpack_require__(1241)
+var __vue_script__ = __webpack_require__(1235)
 /* template */
-var __vue_template__ = __webpack_require__(1242)
+var __vue_template__ = __webpack_require__(1236)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -356,7 +356,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsiForm.vue"
+Component.options.__file = "resources/assets/js/components/views/provinsi/form.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -365,9 +365,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-847c77c2", Component.options)
+    hotAPI.createRecord("data-v-04a4f0a7", Component.options)
   } else {
-    hotAPI.reload("data-v-847c77c2", Component.options)
+    hotAPI.reload("data-v-04a4f0a7", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true

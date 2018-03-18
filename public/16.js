@@ -8,7 +8,7 @@ var normalizeComponent = __webpack_require__(5)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(1240)
+var __vue_template__ = __webpack_require__(1239)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsi.vue"
+Component.options.__file = "resources/assets/js/components/views/desa/desa.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-647c1ebb", Component.options)
+    hotAPI.createRecord("data-v-fa080832", Component.options)
   } else {
-    hotAPI.reload("data-v-647c1ebb", Component.options)
+    hotAPI.reload("data-v-fa080832", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1240:
+/***/ 1239:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -61,21 +61,7 @@ var render = function() {
     _c("div", { staticClass: "card mb-3" }, [
       _c("div", { staticClass: "card-header" }, [_vm._v("Example")]),
       _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "col-2 btn btn-lg btn-primary ml-4 mt-4",
-          attrs: { href: "/#/provinsi/form" }
-        },
-        [_vm._v("Tambah Data")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "card-body" },
-        [_c("WilayahIndonesiaProvinsiTable")],
-        1
-      )
+      _c("div", { staticClass: "card-body" }, [_c("example-vue-table")], 1)
     ])
   ])
 }
@@ -118,7 +104,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-647c1ebb", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-fa080832", module.exports)
   }
 }
 
