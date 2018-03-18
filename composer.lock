@@ -4,9 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "670a6741c6fac97f929d2f7180fea58e",
-    "content-hash": "de234df63137aa231e49079f8f7d5691",
+    "hash": "24239d3010ee4fb1c82a7e6c887cf37a",
+    "content-hash": "18b5280e7acf606909b140e958205548",
     "packages": [
+        {
+            "name": "bantenprov/kegiatan",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bantenprov/kegiatan.git",
+                "reference": "73cc01bc1aba091785ea1555c28369ad192e7cac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bantenprov/kegiatan/zipball/73cc01bc1aba091785ea1555c28369ad192e7cac",
+                "reference": "73cc01bc1aba091785ea1555c28369ad192e7cac",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.4.*",
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers/helpers.php"
+                ],
+                "psr-4": {
+                    "Bantenprov\\Kegiatan\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "bantenprov",
+                    "email": "developer.bantenprov@gmail.com"
+                }
+            ],
+            "description": "Nama Kegiatan",
+            "time": "2018-03-14 11:55:25"
+        },
         {
             "name": "bantenprov/rasio-guru-murid-smp-mts",
             "version": "dev-master",
@@ -17,7 +57,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bantenprov/rasio-guru-murid-smp-mts/zipball/4396f87a2ed79c027dfc7f888158839f71a773de",
+                "url": "https://api.github.com/repos/bantenprov/rasio-guru-murid-smp-mts/zipball/cadac093a54f8c79825720d277dbea3ff6573e5b",
                 "reference": "4396f87a2ed79c027dfc7f888158839f71a773de",
                 "shasum": ""
             },
@@ -3608,6 +3648,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "bantenprov/kegiatan": 20,
         "bantenprov/rasio-guru-murid-smp-mts": 20
     },
     "prefer-stable": false,

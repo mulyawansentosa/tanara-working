@@ -396,6 +396,50 @@ let routes = [
 		component: layout('Default'),
 		children: [
 			{
+				path: '/wilayah-indonesia/provinsi',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsi.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Provinsi"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/kabupaten',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kabupaten/WilayahIndonesiaKabupaten.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Kabupaten"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/kecamatan',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kecamatan/WilayahIndonesiaKecamatan.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Kecamatan"
+				}
+			},
+			{
+				path: '/wilayah-indonesia/desa',
+				components: {
+					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/desa/WilayahIndonesiaDesa.vue'], resolve),
+					navbar: resolve => require(['./components/Navbar.vue'], resolve),
+					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
+				},
+				meta: {
+					title: "Data Desa"
+				}
+			},
+			{
 				path: '/wilayah-indonesia/provinsi/form',
 				components: {
 					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsiForm.vue'], resolve),
@@ -410,17 +454,6 @@ let routes = [
 				path: '/wilayah-indonesia/provinsi/form/:id',
 				components: {
 					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsiForm.vue'], resolve),
-					navbar: resolve => require(['./components/Navbar.vue'], resolve),
-					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
-				},
-				meta: {
-					title: "Data Provinsi"
-				}
-			},
-			{
-				path: '/wilayah-indonesia',
-				components: {
-					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsi.vue'], resolve),
 					navbar: resolve => require(['./components/Navbar.vue'], resolve),
 					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
 				},
@@ -472,17 +505,6 @@ let routes = [
 		component: layout('Default'),
 		children: [
 			{
-				path: '/wilayah-indonesia/kabupaten',
-				components: {
-					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kabupaten/WilayahIndonesiaKabupaten.vue'], resolve),
-					navbar: resolve => require(['./components/Navbar.vue'], resolve),
-					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
-				},
-				meta: {
-					title: "Data Kabupaten"
-				}
-			},
-			{
 				path: '/wilayah-indonesia/kabupaten/form',
 				components: {
 					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kabupaten/WilayahIndonesiaKabupatenForm.vue'], resolve),
@@ -515,17 +537,6 @@ let routes = [
 		component: layout('Default'),
 		children: [
 			{
-				path: '/wilayah-indonesia/kecamatan',
-				components: {
-					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kecamatan/WilayahIndonesiaKecamatan.vue'], resolve),
-					navbar: resolve => require(['./components/Navbar.vue'], resolve),
-					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
-				},
-				meta: {
-					title: "Data Kecamatan"
-				}
-			},
-			{
 				path: '/wilayah-indonesia/kecamatan/form',
 				components: {
 					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/kecamatan/WilayahIndonesiaKecamatanForm.vue'], resolve),
@@ -557,17 +568,6 @@ let routes = [
 		redirect: '/wilayah-indonesia/desa',
 		component: layout('Default'),
 		children: [
-			{
-				path: '/wilayah-indonesia/desa',
-				components: {
-					main: resolve => require(['./components/views/bantenprov/wilayah-indonesia/desa/WilayahIndonesiaDesa.vue'], resolve),
-					navbar: resolve => require(['./components/Navbar.vue'], resolve),
-					sidebar: resolve => require(['./components/Sidebar.vue'], resolve)
-				},
-				meta: {
-					title: "Data Desa"
-				}
-			},
 			{
 				path: '/wilayah-indonesia/desa/form',
 				components: {

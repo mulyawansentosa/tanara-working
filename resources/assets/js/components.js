@@ -121,10 +121,6 @@ Vue.component('rasio-guru-murid-smp-mts-pie-03', RasioGMSmpMtsPie03);
 // PROVINSI //
 import WilayahIndonesiaProvinsiTable from './components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsiTable.vue';
 Vue.component('WilayahIndonesiaProvinsiTable', WilayahIndonesiaProvinsiTable);
-/*
-import WilayahIndonesiaProvinsiSearchTable from './components/views/bantenprov/wilayah-indonesia/provinsi/WilayahIndonesiaProvinsiSearchTable.vue';
-Vue.component('WilayahIndonesiaProvinsiSearchTable', WilayahIndonesiaProvinsiSearchTable);
-*/
 // KABUPATEN //
 import WilayahIndonesiaKabupatenTable from './components/views/bantenprov/wilayah-indonesia/kabupaten/WilayahIndonesiaKabupatenTable.vue';
 Vue.component('WilayahIndonesiaKabupatenTable', WilayahIndonesiaKabupatenTable);
